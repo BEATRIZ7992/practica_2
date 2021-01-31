@@ -1,0 +1,55 @@
+*{
+    
+    margin: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+   
+}
+
+
+header{
+
+    background-color: rgb(83, 129, 131);
+}
+
+header h1{
+    font-style: sans-serif;
+    color: white
+    
+    
+}
+
+.contenedor{
+
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    counter-reset: auto;
+    border: solid 2px;
+    height:870px ;
+    width: 800px;
+    padding:20px;
+    background-color:rgb(75, 84, 87);
+    
+}
+
+
+main{
+    background-color: rgb(75, 84, 87);
+}
+
+ footer{
+     display: grid;
+    background-color: black;
+    grid-template-rows: repeat(1, 1fr);
+    
+   
+   
+      
+     
+    
+
+   
+   
+}
