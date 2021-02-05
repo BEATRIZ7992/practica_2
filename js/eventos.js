@@ -67,7 +67,7 @@ function deleteTask(event) {
 
 }
 
-
+//
 
 const inputTitulo = document.querySelector('#titulo');
 const inputPrioridad = document.querySelector('#prioridad');

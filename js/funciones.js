@@ -1,36 +1,69 @@
-/*
-function deleteTask(event) {
 
-    let id = parseInt(event.target.dataset.id);
-    let article = event.target.parentNode;
 
-    article.parentNode.removechild(article);
 
-    let position = tareas.findIndex(tarea => tarea.id === id);
+////priority filtro
 
-    tareas.splice(position, 1);
-    console.log(tareas);
+
+const selectPrioridad = document.querySelector('#select1')
+
+selectPrioridad.addEventListener('change', getPriority);
+
+//priotidad
+
+function getPriority(event) {
+    let prioridad = event.target.value;
+    if (prioridad != "") {
+        let lista = filterPrioridad(prioridad, tareas);
+        printTask(lista);
+    } else {
+        printTask(tareas)
+    }
+}
+
+
+function filterPrioridad(pImportante, pListaTareas) {
+
+
+
+    const filterList = pListaTareas.filter(tarea => tarea.prioridad == pImportante);
+
+    return filterList;
 
 
 }
-deleteTask(tareas)
-
- */
 
 
+//palabra
+let texto = document.querySelector('#inputTarea')
 
-/* function filterPrioridad(pImportante, pListaTareas) {
+texto.addEventListener('keydown', getInputData);
 
-    return pListaTareas.filter(tarea => tarea.titulo >= pImportante);
+function getInputData(event) {
+    if (event.keyCode == 13) {
+
+        let buscadorTarea = texto.value;
+        let palabraEcontrada = buscadorPorPalabra(buscadorTarea, tareas);
+        printTask(palabraEcontrada);
+    }
 }
 
-const filterPrioridad2 = (pImportante, pListaTareas) => pListaTareas.filter(tarea => tarea.prioridad <= pImportante && tarea.prioridad);
+function buscadorPorPalabra(pPalabra, pTaskList) {
+    const listaFiltrada = pTaskList.filter(task => task.titulo.toLowerCase().includes(pPalabra.toLowerCase()))
+
+    return listaFiltrada
+}
 
 
 
 
 
- */
+
+
+
+
+
+
+
 
 
 
