@@ -69,14 +69,14 @@ section .flex  {
   
 }
 
-.URGENTE{
+.urgente{
 background-color: crimson;
 }
-.Diario{
-    background-color: darkcyan;
+.diario{
+    background-color:yellow;
 
 }
 
-.Mensual{
+.mensual{
 background-color: darkgreen;
 }
