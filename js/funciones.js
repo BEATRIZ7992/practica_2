@@ -1,41 +1,41 @@
+/*
+function deleteTask(event) {
 
+    let id = parseInt(event.target.dataset.id);
+    let article = event.target.parentNode;
 
-let botones = document.querySelector('.form-select')
-let sectionListaTareas = document.querySelector('#ListaTareas')
+    article.parentNode.removechild(article);
 
+    let position = tareas.findIndex(tarea => tarea.id === id);
 
-const printBoton = function (pBtn) {
-    for (let boton of pBtn) {
-        botones.innerHTML += `    
-        
-        <option value="1">${boton.prioridad}</option>
-        
-   `
-    }
-}
-printBoton(tareas)
+    tareas.splice(position, 1);
+    console.log(tareas);
 
-
-
-const printTask = function (pListTask) {
-    for (let task of pListTask) {
-        sectionListaTareas.innerHTML += `
-    
-                <ul>
-                    <li>${task.titulo}:${task.prioridad}</li>
-                    
-                </ul>`
-
-    }
 
 }
-printTask(tareas)
+deleteTask(tareas)
 
-//pintar solo los urgentes
+ */
 
-function filterByTitulo(pTitulo, pTaskList) {
-    const filterlist = pTaskList.filter(task => task.titulo == pTitulo)
 
-    return filterlist
 
+/* function filterPrioridad(pImportante, pListaTareas) {
+
+    return pListaTareas.filter(tarea => tarea.titulo >= pImportante);
 }
+
+const filterPrioridad2 = (pImportante, pListaTareas) => pListaTareas.filter(tarea => tarea.prioridad <= pImportante && tarea.prioridad);
+
+
+
+
+
+ */
+
+
+
+
+
+
+
+
